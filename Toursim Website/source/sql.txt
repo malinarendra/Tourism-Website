@@ -1,0 +1,3 @@
+after writing code for sql just type the command in workbench as 
+
+ALTER user 'root'@'localhost' identified with mysql_native_password by 'Talmala@222'

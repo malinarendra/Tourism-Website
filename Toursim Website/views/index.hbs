@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Book My Trip
+    </title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div class="body main">
+
+
+        <!-- home page navbar -->
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo">
+                    <a href="index.hbs"><img src="./images/logo.png"></a>
+                </div>
+                <li><a href="./index.hbs">HOME</a></li>
+                <li><a href="/login.hbs">LOGIN</a></li>
+            </ul>
+
+        </nav>
+
+
+        <!-- landing page -->
+        <div id="landing-page">
+            <h1 class="space">Welcome To BOOK MY TRIP</h1>
+            <p class="space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptas in beatae
+                asperiores dolorem doloremque, quidem recusandae totam natus distinctio! Tempora illo libero unde aut
+                consequuntur dignissimos excepturi sapiente tempore!</p>
+            <button class="space"><a href="./login.hbs ">Visit now!</a></button>
+        </div>
+
+
+        <!-- Trending Places -->
+        <Section id="trending" Class="Places">
+            <!-- ===============aboutus============== -->            
+            <!--===========Footer=================-->
+            <Div Class="Footer">
+                <Div Class="Links">
+                    <H3>Quick Links</H3>
+                    <Ul>
+                        <Li>Offers & Discounts</Li>
+                        <Li>Get Coupon</Li>
+                        <Li>Contact Us</Li>
+                        <Li>About</Li>
+                    </Ul>
+                </Div>
+                <Div Class="Links">
+                    <H3>Contact us</H3>
+                    <Ul>
+                        <Li>head quarter</Li>
+                        <Li>tour query </Li>
+                        <Li>booking query</Li>
+                        <Li>details </Li>
+                    </Ul>
+                </Div>
+                <Div Class="Links">
+                    <H3>Support</H3>
+                    <Ul>
+                        <Li>Frequently Asked Questions</Li>
+                        <Li>Report A Payment Issue</Li>
+                        <Li>Terms & Conditions</Li>
+                        <Li>Privacy Policy</Li>
+                    </Ul>
+                </Div>
+            </Div>
+        </Section>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let l = slides.length;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < 3; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 5 seconds
+    }
+</script>
+</Body>
+</html>

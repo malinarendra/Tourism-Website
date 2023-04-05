@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book My Trip</title>
+    <link rel="stylesheet" href="css/booktrip.css">
+</head>
+
+<body>
+    <form action="/booktrip" method="post">
+        <div class="elem-group">
+            <label for="name">Your Name <span style="color:red;margin-left:5px">*</span></label>
+            <input type="text" id="name" name="visitor_name" placeholder="Chetan Patil" 
+                required />
+        </div>
+        <div class="elem-group">
+            <label for="email">Your E-mail<span style="color:red;margin-left:5px">*</span></label>
+            <input type="email" id="email" name="visitor_email" placeholder="chetan.patil@email.com" required />
+        </div>
+        <div class="elem-group">
+            <label for="phone">Your Phone <span style="color:red;margin-left:5px">*</span></label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="+91 3454345445"
+                 max="10" />
+        </div>
+        <hr />
+        <div class="elem-group inlined">
+            <label for="adult">Adults <span style="color:red;margin-left:5px">*</span></label>
+            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required />
+        </div>
+        <div class="elem-group inlined">
+            <label for="child">Children <span style="color:red;margin-left:5px">*</span></label>
+            <input type="number" id="child" name="total_children" placeholder="2" min="0" required />
+        </div>
+        <div class="elem-group">
+            <label for="room-selection">Select Tour Pack <span style="color:red;margin-left:5px">*</span></label>
+            <select id="room-selection" name="tour_pack" required>
+                <option hidden value=""></option>
+                <option value="Maharashtra Tour">Maharashtra Tour</option>
+                <option value="Tamilnadu Tour">Tamilnadu Tour</option>
+                <option value="Delhi Tour">Delhi Tour</option>
+                <option value="J & K Tour">J & K Tour</option>
+                <option value="Gujrat Tour">Gujrat Tour</option>
+                <option value="Hyderabad Tour">Hyderabad Tour</option>
+            </select>
+        </div>
+        <hr />
+        <div class="elem-group">
+            <label for="message">Anything Else?</label>
+            <textarea style="resize: none;" id="message" name="visitor_message" placeholder="Tell us anything else that might be important."
+                ></textarea>
+        </div>
+        <button type="submit">Book The Trip</button>
+    </form>
+    <script src="js/booktrip.js"></script>
+</body>
+
+</html>

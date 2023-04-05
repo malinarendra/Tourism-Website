@@ -1,0 +1,81 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin-page.css" />
+  </head>
+
+  <body>
+    <nav>
+      <img src="images/logo.png" alt="" />
+      <ul>
+        <li><a href="/alogin">Trips</a></li>
+        <li><a href="/aquery">Queries</a></li>
+        <li><a href="/alogout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <section class="tours">
+      <h1>Booked Tours</h1>
+      <div class="tour-section">
+        <table>
+          <thead>
+            <tr>
+              <td style="width:30%">NAME</td>
+              <td style="width:30%">EMAIL</td>
+              <td style="width:10%">PHONE</td>
+              <td style="width:5%">ADULTS</td>
+              <td style="width:5%">CHILDRENS</td>
+              <td style="width:3%">TOUR</td>
+              <td style="width:30%">MESSAGE</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each data}}
+              <tr>
+                <td style="width:15%">{{this.NAME}}</td>
+                <td style="width:20%">{{this.EMAIL}}</td>
+                <td style="width:10%">{{this.PHONE}}</td>
+                <td style="width:5%">{{this.ADULTS}}</td>
+                <td style="width:5%">{{this.CHILDRENS}}</td>
+                <td style="width:15%">{{this.TOUR}}</td>
+                <td style="width:30%">{{this.MESSAGE}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {{!-- <section class="tours">
+      <h1>Client Queries</h1>
+      <div class="tour-section">
+        <table>
+          <thead>
+            <tr>
+              <td style="width:30%">FIRST NAME</td>
+              <td style="width:30%">LAST NAME</td>
+              <td style="width:10%">EMAIL</td>
+              <td style="width:5%">MESSAGE</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each fback}}
+              <tr>
+                <td style="width:15%">{{this.FIRSTNAME}}</td>
+                <td style="width:20%">{{this.LASTNAME}}</td>
+                <td style="width:10%">{{this.EMAIL}}</td>
+                <td style="width:5%">{{this.MESSAGE}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </section> --}}
+
+  </body>
+
+</html>
